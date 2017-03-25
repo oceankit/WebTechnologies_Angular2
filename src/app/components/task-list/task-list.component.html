@@ -1,0 +1,16 @@
+
+  <div [className]="'allTasks'"
+   *ngFor="let project of projects">
+    <md-card>
+    <md-card-title>
+        <span class="md-headline">{{ project.Title }}</span>
+    </md-card-title>
+    <md-card-content>
+    {{ project.Description }} <br>
+    <h4>Tasks : </h4>
+    <div *ngFor="let task of project.tasks"> 
+          <md-card-subtitle> {{ task.Title }} </md-card-subtitle>
+    </div>
+    </md-card-content>
+    </md-card>
+  </div>
